@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CUDA — Learn GPU Programming</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Chakra+Petch:wght@600;700&family=Cabin:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="theme.js"></script>
+</head>
+<body>
+  <header class="top">
+    <button id="menu" class="icon only-mobile" aria-label="Toggle topics">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="logo" href="#/">CUDA</a>
+
+    <div class="search">
+      <input id="q" type="search" placeholder="search for a topic" autocomplete="off" aria-label="Search">
+      <svg class="mag" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <div id="results" class="results" hidden></div>
+    </div>
+
+    <div class="top-right">
+      <button id="theme" class="icon" aria-label="Toggle dark mode">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5Z"/></svg>
+      </button>
+      <button id="auth" class="signin"><b>Sign In</b><small>editor</small></button>
+    </div>
+  </header>
+
+  <div class="shell">
+    <aside id="side">
+      <h2>CUDA Topics</h2>
+      <nav id="tree" aria-label="Topics"></nav>
+      <button id="addTopic" class="add-topic" hidden>Add Topic</button>
+    </aside>
+
+    <main>
+      <div id="scroll"><article id="doc"></article></div>
+      <footer class="pager">
+        <button id="prev" aria-label="Previous topic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12H4m6-6-6 6 6 6"/></svg>
+          <span></span>
+        </button>
+        <button id="next" aria-label="Next topic">
+          <span></span>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
+        </button>
+      </footer>
+    </main>
+  </div>
+  <div id="scrim"></div>
+
+  <dialog id="loginDlg">
+    <form id="loginForm">
+      <h3>Editor sign in</h3>
+      <label>Username<input id="lu" autocomplete="username" required></label>
+      <label>Password<input id="lp" type="password" autocomplete="current-password" required></label>
+      <p id="loginErr" class="err" hidden></p>
+      <div class="row">
+        <button type="button" id="loginCancel">Cancel</button>
+        <button type="submit" class="primary">Sign in</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="askDlg">
+    <form id="askForm">
+      <h3 id="askLabel"></h3>
+      <input id="askInput" maxlength="120" required>
+      <div class="row">
+        <button type="button" id="askCancel">Cancel</button>
+        <button type="submit" class="primary">OK</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div id="toast" role="status"></div>
+
+  <script src="md.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

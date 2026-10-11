@@ -1,0 +1,11 @@
+[
+  {
+    "id": "9d5f9fd08b",
+    "type": "note",
+    "title": "Welcome",
+    "parentId": null,
+    "order": 0,
+    "content": "## Welcome\n\nThis site is empty on purpose. Sign in as an **editor** (top right) and build the structure yourself:\n\n- Use **Add Topic** to create a top-level folder.\n- Use the **+** next to a folder to add notes or sub-folders inside it, at any depth.\n- Drag items in the sidebar to reorder them or move them into other folders.\n\n## Writing lessons\n\nLessons are written in Markdown, including code:\n\n```cuda\n__global__ void add(const float* a, const float* b, float* c, int n) {\n    int i = blockIdx.x * blockDim.x + threadIdx.x;\n    if (i < n) c[i] = a[i] + b[i];\n}\n```\n\nYou can delete this note once you have your own.\n",
+    "updated": 1791719856627
+  }
+]
