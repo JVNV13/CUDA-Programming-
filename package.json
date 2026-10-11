@@ -3,7 +3,15 @@
   "version": "1.0.0",
   "description": "CUDA programming learning platform: public reading, editor-only Markdown authoring, folder/note tree.",
   "main": "server.js",
-  "scripts": { "start": "node server.js" },
-  "engines": { "node": ">=18" },
-  "license": "MIT"
+  "scripts": {
+    "start": "node server.js",
+    "adduser": "node scripts/adduser.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "mongodb": "^7.7.0"
+  }
 }
